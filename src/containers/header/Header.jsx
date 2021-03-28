@@ -4,10 +4,8 @@ import MenuContainer from "../menu/Menu"
 
 const HeaderContainer = () => {
     return (
-        <Navbar collapseOnSelect bg="light" expand="md" className="mb-3">
-            <Navbar.Brand className="font-weight-bold text-muted">
-                Tarea02
-        </Navbar.Brand>
+        <Navbar collapseOnSelect bg="white" expand="md" className="p-3 mb-3 border-bottom shadow-sm">
+            <Navbar.Brand className="font-weight-bold text-muted">Tarea N°2</Navbar.Brand>
             <Navbar.Toggle />
             <Navbar.Collapse className="justify-content-end">
                 <MenuContainer />

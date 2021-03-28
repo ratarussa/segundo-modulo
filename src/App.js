@@ -1,15 +1,16 @@
 import React from "react"
-import ContactoContainer from "./containers/contacto/Contacto"
-import './App.css'
-import HeaderContainer from "./containers/header/Header";
+import HeaderContainer from "./containers/header/Header"
+import FooterContainer from "./containers/footer/Footer"
+import SectionContainer from "./containers/section/Section";
 
 
 function App() {
   return (
-    <div className="App container py-3">
+    <>
       <HeaderContainer />
-      <ContactoContainer />
-    </div>
+      <SectionContainer />
+      <FooterContainer />
+    </>
   );
 }
 
