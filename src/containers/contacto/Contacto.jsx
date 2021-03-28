@@ -1,24 +1,27 @@
 import React, { useState } from "react"
 import Form from "react-bootstrap/Form"
 import LoaderButton from "../../components/LoaderButton"
+import FormFields from "../../libs/FormFieldsLib"
 import "./Contacto.css"
 
 const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
 
 const ContactoContainer = () => {
-    const [email, setEmail] = useState('')
-    const [firstName, setFirstName] = useState('')
-    const [lastName, setLastName] = useState("")
-    const [phoneNumber, setPhoneNumber] = useState('')
-    const [message, setMessage] = useState('')
-    const [isLoading, setIsLoading] = useState(false);
+    const [isLoading, setIsLoading] = useState(false)
+    const [fields, handleFieldChange] = FormFields({
+        email: '',
+        firstName: '',
+        lastName: '',
+        phoneNumber: '',
+        message: '',
+    })
 
     function validateForm() {
-        return email.length > 0 &&
-            firstName.length > 0 &&
-            lastName.length > 0 &&
-            phoneNumber.length > 0 &&
-            message.length > 0
+        return fields.email.length > 0 &&
+            fields.firstName.length > 0 &&
+            fields.lastName.length > 0 &&
+            fields.phoneNumber.length > 0 &&
+            fields.message.length > 0
     }
 
     async function handleSubmit(event) {
@@ -30,12 +33,12 @@ const ContactoContainer = () => {
 
         alert("Submitted Form")
 
-        setEmail('')
-        setFirstName('')
-        setLastName('')
-        setPhoneNumber('')
-        setMessage('')
-        
+        fields.email = ''
+        fields.firstName = ''
+        fields.lastName = ''
+        fields.phoneNumber = ''
+        fields.message = ''
+
         setIsLoading(false)
     }
 
@@ -47,32 +50,32 @@ const ContactoContainer = () => {
                     <Form.Control
                         autoFocus
                         type="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
+                        value={fields.email}
+                        onChange={handleFieldChange}
                     />
                 </Form.Group>
                 <Form.Group size="lg" controlId="firstName">
                     <Form.Label>First Name</Form.Label>
                     <Form.Control
                         type="text"
-                        value={firstName}
-                        onChange={(e) => setFirstName(e.target.value)}
+                        value={fields.firstName}
+                        onChange={handleFieldChange}
                     />
                 </Form.Group>
                 <Form.Group size="lg" controlId="lastName">
                     <Form.Label>Last Name</Form.Label>
                     <Form.Control
                         type="text"
-                        value={lastName}
-                        onChange={(e) => setLastName(e.target.value)}
+                        value={fields.lastName}
+                        onChange={handleFieldChange}
                     />
                 </Form.Group>
                 <Form.Group size="lg" controlId="phoneNumber">
                     <Form.Label>Phone Number</Form.Label>
                     <Form.Control
                         type="phone"
-                        value={phoneNumber}
-                        onChange={(e) => setPhoneNumber(e.target.value)}
+                        value={fields.phoneNumber}
+                        onChange={handleFieldChange}
                     />
                 </Form.Group>
                 <Form.Group size="lg" controlId="message">
@@ -80,8 +83,8 @@ const ContactoContainer = () => {
                     <Form.Control
                         as="textarea"
                         rows={3}
-                        value={message}
-                        onChange={(e) => setMessage(e.target.value)}
+                        value={fields.message}
+                        onChange={handleFieldChange}
                     />
                 </Form.Group>
                 <LoaderButton
