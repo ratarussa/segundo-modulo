@@ -21,29 +21,23 @@ const PracticoContainer = () => {
             <Card className="my-2">
                 <Card.Body>
                     <Card.Title>1.- Listar elementos</Card.Title>
-                    <Card.Text>
-                        {items.map((item, index) => (
-                            <div key={index}>{item}</div>
-                        ))}
-                    </Card.Text>
+                    {items.map((item, index) => (
+                        <div key={index}>{item}</div>
+                    ))}
                 </Card.Body>
             </Card>
             <Card className="my-2">
                 <Card.Body>
                     <Card.Title>2.- Listar Componentes</Card.Title>
-                    <Card.Text>
-                        {items.map((item, index) => (
-                            <Item key={index}>{item}</Item>
-                        ))}
-                    </Card.Text>
+                    {items.map((item, index) => (
+                        <Item key={index}>{item}</Item>
+                    ))}
                 </Card.Body>
             </Card>
             <Card className="my-2">
                 <Card.Body>
                     <Card.Title>3.- Manejo de Input</Card.Title>
-                    <Card.Text>
-                        <input value={name} onChange={handleChange} />
-                    </Card.Text>
+                    <input value={name} onChange={handleChange} />
                 </Card.Body>
             </Card>
         </div>

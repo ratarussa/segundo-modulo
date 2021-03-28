@@ -6,7 +6,7 @@ import PracticoContainer from "../practico/Practico"
 const SectionContainer = () => {
     return (
         <div className="container">
-            <Tabs defaultActiveKey="form">
+            <Tabs defaultActiveKey="form" transition={false} id="section">
                 <Tab eventKey="form" title="Formulario Contacto">
                     <ContactoContainer />
                 </Tab>
