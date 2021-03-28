@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { Form, Alert } from "react-bootstrap"
-import LoaderButton from "../../components/LoaderButton/LoaderButton"
-import FormFields from "../../libs/FormFieldsLib"
+import LoaderButton from "../../components/loader-button/LoaderButton"
+import FormFields  from "../../components/form-fields/FormFields"
 import styles from './Contacto.module.css'
 
 
