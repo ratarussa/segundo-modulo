@@ -1,11 +1,11 @@
 import React from "react"
-import { Tabs, Tab } from "react-bootstrap"
+import { Container, Tabs, Tab } from "react-bootstrap"
 import ContactoContainer from "../contacto/Contacto"
 import PracticoContainer from "../practico/Practico"
 
 const SectionContainer = () => {
     return (
-        <div className="container">
+        <Container>
             <Tabs defaultActiveKey="form" transition={false} id="section">
                 <Tab eventKey="form" title="Formulario Contacto">
                     <ContactoContainer />
@@ -14,7 +14,7 @@ const SectionContainer = () => {
                     <PracticoContainer />
                 </Tab>
             </Tabs>
-        </div>
+        </Container>
     )
 }
 

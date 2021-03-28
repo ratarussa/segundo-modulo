@@ -1,16 +1,17 @@
 import React from "react"
+import { Row, Col, Container } from "react-bootstrap"
 
 const FooterContainer = () => {
     return (
-        <div className="container">
+        <Container>
             <footer className="pt-4 my-md-5 pt-md-5 border-top">
-                <div className="row">
-                    <div className="col-12">
+                <Row>
+                    <Col xs={12}>
                         <small className="d-block m-0 text-muted">© Tarea realizada por RataRussa.</small>
-                    </div>
-                </div>
+                    </Col>
+                </Row>
             </footer>
-        </div>
+        </Container >
     )
 
 }

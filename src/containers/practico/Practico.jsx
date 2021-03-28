@@ -37,6 +37,7 @@ const PracticoContainer = () => {
             <Card className="my-2">
                 <Card.Body>
                     <Card.Title>3.- Manejo de Input</Card.Title>
+                    <p>{name}</p>
                     <input value={name} onChange={handleChange} />
                 </Card.Body>
             </Card>

@@ -1,7 +1,7 @@
 import React, { useState } from "react"
-import { Form, Alert } from "react-bootstrap"
+import { Form, Alert, Container } from "react-bootstrap"
 import LoaderButton from "../../components/loader-button/LoaderButton"
-import FormFields  from "../../components/form-fields/FormFields"
+import FormFields from "../../components/form-fields/FormFields"
 import styles from './Contacto.module.css'
 
 
@@ -114,10 +114,10 @@ const ContactoContainer = () => {
     }
 
     return (
-        <div className="container mt-4">
+        <Container className="mt-4">
             { showAlert === true && renderConfirmationAlert()}
             { renderForm()}
-        </div>
+        </Container>
     )
 }
 
